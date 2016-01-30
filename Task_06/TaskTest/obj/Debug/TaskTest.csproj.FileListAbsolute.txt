@@ -28,3 +28,10 @@ G:\EPAM\Kuptsova_Albina_Task_06\TaskTest\bin\Debug\Task.pdb
 G:\EPAM\Kuptsova_Albina_Task_06\TaskTest\obj\Debug\TaskTest.csprojResolveAssemblyReference.cache
 G:\EPAM\Kuptsova_Albina_Task_06\TaskTest\obj\Debug\TaskTest.dll
 G:\EPAM\Kuptsova_Albina_Task_06\TaskTest\obj\Debug\TaskTest.pdb
+C:\projects\EPAM\Tasks\Task_06\TaskTest\bin\Debug\TaskTest.dll
+C:\projects\EPAM\Tasks\Task_06\TaskTest\bin\Debug\TaskTest.pdb
+C:\projects\EPAM\Tasks\Task_06\TaskTest\bin\Debug\Task.dll
+C:\projects\EPAM\Tasks\Task_06\TaskTest\bin\Debug\Task.pdb
+C:\projects\EPAM\Tasks\Task_06\TaskTest\obj\Debug\TaskTest.csprojResolveAssemblyReference.cache
+C:\projects\EPAM\Tasks\Task_06\TaskTest\obj\Debug\TaskTest.dll
+C:\projects\EPAM\Tasks\Task_06\TaskTest\obj\Debug\TaskTest.pdb

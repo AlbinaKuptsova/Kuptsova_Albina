@@ -10,13 +10,26 @@ using Task;
 namespace TaskTest
 {
     [TestClass] 
-    public class MyArrayQueueTest
+    public class MyQueueTest
     {
         [TestMethod]
-        public void QueueTest(){
+        public void MyQueueArrayTest()
+        {
+            QueueTest(CollectionType.Array);
+        }
+
+        [TestMethod]
+        public void MyQueueRefTest()
+        {
+            QueueTest(CollectionType.References);
+        }
+
+
+        [TestMethod]
+        public void QueueTest(CollectionType collectionType){
             try
             {
-                MyArrayQueue<int> queue = new MyArrayQueue<int>(10);
+                var queue = CollectionFactory.CreateAQueue<int>(collectionType,10);
 
                 queue.Enqueue(5);
                 queue.Enqueue(10);

@@ -52,12 +52,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MyArrayListTest.cs" />
-    <Compile Include="MyArrayQueueTest.cs" />
-    <Compile Include="MyArrayStackTest.cs" />
-    <Compile Include="MyRefList.cs" />
-    <Compile Include="MyRefQueueTest.cs" />
-    <Compile Include="MyRefStackTest.cs" />
+    <Compile Include="MyListTest.cs" />
+    <Compile Include="MyQueueTest.cs" />
+    <Compile Include="MyStackTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

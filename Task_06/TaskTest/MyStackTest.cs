@@ -6,14 +6,26 @@ using Task;
 namespace TaskTest
 {
     [TestClass]
-    public class MyArrayStackTest
+    public class MyStackTest
     {
         [TestMethod]
-        public void PushPopTest()
+        public void MyStackArrayTest()
+        {
+            StackTest(CollectionType.Array);
+        }
+
+        [TestMethod]
+        public void MyStackRefTest()
+        {
+            StackTest(CollectionType.References);
+        }           
+
+        [TestMethod]
+        public void StackTest(CollectionType collectionType)
         {
             try
             {
-				MyArrayStack<int> stack = new MyArrayStack<int>(10);
+				var stack = CollectionFactory.CreateAStack<int>(collectionType,10);
                 
 				stack.Push(5);
 				stack.Push(10);

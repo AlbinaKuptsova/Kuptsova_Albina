@@ -7,50 +7,46 @@ using System.Threading.Tasks;
 
 namespace Task
 {
-    public class MyReferenceList<T> : IAList<T>, IEnumerable<T>, ICloneable, IDisposable
+    public class MyReferenceList<T> : IAList<T>
     {
-        public Cell<T> first;
+        private Cell<T> first;
 
-        public T Get(int index)
-        {
-            var last = first;
-            var i = 1;
-            while (i != index)
-            {
-                i++;
-                last = last.next;
-            }
-            return last.data;
-        }
-
-        public void Insert(T elem, int index)
+        public void Insert(T elem, int ind)
         {
             var newCell = new Cell<T>();
             newCell.data = elem;
-
-            var last = first;
-            var i = 1;
-
-            while (i != index - 1)
+            if (ind == 0)
             {
-                i++;
-                last = last.next;
+                newCell.next = first;
+                first = newCell;
             }
-            newCell.next = last.next;
-            last.next = newCell;
+            else
+            {
+                var last = first;
+                var i = 0;
+
+                while (i != ind - 1)
+                {
+                    i++;
+                    last = last.next;
+                }
+                newCell.next = last.next;
+                last.next = newCell;
+            }
         }
 
-        public void Remove(int index)
+        public void Remove(int ind)
         {
-            if (index == 1)
+            if (ind == 0)
             {
                 first = first.next;
                 return;
             }
-            var last = first;
-            var i = 1;
 
-            while (i != index - 1)
+            var last = first;
+            var i = 0;
+
+            while (i != ind - 1)
             {
                 i++;
                 last = last.next;
@@ -58,12 +54,25 @@ namespace Task
             last.next = last.next.next;
         }
 
-        object ICloneable.Clone()
+        public T Get(int ind)
+        {
+            var last = first;
+            var i = 0;
+            while (i != ind)
+            {
+                i++;
+                last = last.next;
+            }
+            return last.data;
+        }
+
+
+        public object Clone()
         {
             throw new NotImplementedException();
         }
 
-        void IDisposable.Dispose()
+        public void Dispose()
         {
             throw new NotImplementedException();
         }
@@ -73,7 +82,7 @@ namespace Task
             throw new NotImplementedException();
         }
 
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
         }

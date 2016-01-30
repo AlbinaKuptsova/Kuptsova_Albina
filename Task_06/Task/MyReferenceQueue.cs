@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Task
 {
-    public class MyReferenceQueue<T> : IAQueue<T>, IEnumerable<T>, ICloneable, IDisposable
+    public class MyReferenceQueue<T> : IAQueue<T>
     {
         private Cell<T> last = null;
 
@@ -44,12 +44,12 @@ namespace Task
             }
         }
 
-        object ICloneable.Clone()
+        public object Clone()
         {
             throw new NotImplementedException();
         }
 
-        void IDisposable.Dispose()
+        public void Dispose()
         {
             throw new NotImplementedException();
         }
@@ -59,7 +59,7 @@ namespace Task
             throw new NotImplementedException();
         }
 
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
         }

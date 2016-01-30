@@ -45,7 +45,6 @@ namespace Task
             if (index >= Max)
                 throw new Exception("Индекс больше или равен максимуму");
 
-
             for (int i = index; i < current; i++)
             {
                 A[i] = A[i + 1];

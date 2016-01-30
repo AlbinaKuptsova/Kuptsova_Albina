@@ -20,3 +20,8 @@ G:\EPAM\Kuptsova_Albina_Task_06\Task\bin\Debug\Task.pdb
 G:\EPAM\Kuptsova_Albina_Task_06\Task\obj\Debug\Task.csprojResolveAssemblyReference.cache
 G:\EPAM\Kuptsova_Albina_Task_06\Task\obj\Debug\Task.dll
 G:\EPAM\Kuptsova_Albina_Task_06\Task\obj\Debug\Task.pdb
+C:\projects\EPAM\Tasks\Task_06\Task\bin\Debug\Task.dll
+C:\projects\EPAM\Tasks\Task_06\Task\bin\Debug\Task.pdb
+C:\projects\EPAM\Tasks\Task_06\Task\obj\Debug\Task.csprojResolveAssemblyReference.cache
+C:\projects\EPAM\Tasks\Task_06\Task\obj\Debug\Task.dll
+C:\projects\EPAM\Tasks\Task_06\Task\obj\Debug\Task.pdb

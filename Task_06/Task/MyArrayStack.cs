@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Task
 {
-    public class MyArrayStack<T> : IAStack<T>, IEnumerable<T>, ICloneable, IDisposable
+    public class MyArrayStack<T> : IAStack<T>
 
     {
         int current;
@@ -33,17 +33,8 @@ namespace Task
             current += 1;
         }
 
-        void IAStack<T>.Push(T elem)
-        {
-            throw new NotImplementedException();
-        }
-
-        T IAStack<T>.Pop()
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        
+        public IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
         }
@@ -53,12 +44,12 @@ namespace Task
             throw new NotImplementedException();
         }
 
-        object ICloneable.Clone()
+        public object Clone()
         {
             throw new NotImplementedException();
         }
 
-        void IDisposable.Dispose()
+        public void Dispose()
         {
             throw new NotImplementedException();
         }

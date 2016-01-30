@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Task
 {
-    public class MyArrayQueue<T>: IAQueue<T>, IEnumerable<T>, ICloneable, IDisposable
-    {
+    
+    public class MyArrayQueue<T>: IAQueue<T>
+    { 
         T[] queue;
         int N;
         int start, cursor;
@@ -46,17 +47,17 @@ namespace Task
             return queue[start - 1];
         }
 
-        void IDisposable.Dispose()
+        public void Dispose()
         {
             throw new NotImplementedException();
         }
 
-        object ICloneable.Clone()
+        public object Clone()
         {
             throw new NotImplementedException();
         }
 
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
         }
