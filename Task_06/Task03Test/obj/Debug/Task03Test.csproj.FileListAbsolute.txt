@@ -1,0 +1,9 @@
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\bin\Debug\Task03Test.dll
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\bin\Debug\Task03Test.pdb
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\bin\Debug\Task03.dll
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\bin\Debug\Task03.pdb
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\obj\Debug\Task03Test.csprojResolveAssemblyReference.cache
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\obj\Debug\Task03Test.dll
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03Test\obj\Debug\Task03Test.pdb

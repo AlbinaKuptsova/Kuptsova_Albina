@@ -1,0 +1,5 @@
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03\bin\Debug\Task03.dll
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03\bin\Debug\Task03.pdb
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03\obj\Debug\Task03.csprojResolveAssemblyReference.cache
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03\obj\Debug\Task03.dll
+C:\Users\binnn\Desktop\Kuptsova_Albina_Task_06\Task03\obj\Debug\Task03.pdb
