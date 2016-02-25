@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task01
+namespace Task_01
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Введите первую строку: ");
             string s1 = Console.ReadLine();
             Console.WriteLine("Введите вторую строку: ");
@@ -23,35 +22,29 @@ namespace Task01
             string s5 = Console.ReadLine();
 
             string[] s = { s1, s2, s3, s4, s5 };
-            StrSort sort1 = new StrSort(MethodStringSort);
-            string[] ss = sort1(s);
+            AlphabetArraySort SortArray = new AlphabetArraySort(AlphLengthSortString);
+            string[] ss = MethodStringSort(s, SortArray);
 
-            foreach(var elem in ss)
+            Console.WriteLine("Отсортированный массив:");
+            foreach (var elem in ss)
             {
                 Console.WriteLine(elem);
             }
             Console.ReadKey();
 
+
         }
 
-            public delegate string[] StrSort(string []s);
+        public delegate int AlphabetArraySort(string s1, string s2);
 
-            static string[] MethodStringSort(string []s)
-            {
+        public static string[] MethodStringSort(string[] s, AlphabetArraySort sort)
+        {
             string[] s2 = s;
-            //сортировка строк по длине
             for (int i = 0; i < s2.Length - 1; i++)
             {
                 for (int j = i + 1; j < s2.Length; j++)
                 {
-                    if (s2[j].Length < s2[i].Length)
-                    {
-                        var temp = s2[i];
-                        s2[i] = s2[j];
-                        s2[j] = temp;
-                    }
-                    //поиск одинаковых строк и упорядочивание их по алфавиту
-                    if (s2[j].Length == s2[i].Length  && s2[j].CompareTo(s2[i])<0)
+                    if (sort(s2[j], s2[i]) == 1)
                     {
                         var temp = s2[i];
                         s2[i] = s2[j];
@@ -60,6 +53,27 @@ namespace Task01
                 }
             }
             return s2;
+        }
+
+        static int AlphLengthSortString(string str1, string str2)
+        {
+            if (str1.Length < str2.Length)
+            {
+                return 1;
+            }
+            else if (str1.Length > str2.Length)
+            {
+                return -1;
+            }
+            else if (str2.CompareTo(str1) < 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return 1;
+            }
+
         }
     }
 }
