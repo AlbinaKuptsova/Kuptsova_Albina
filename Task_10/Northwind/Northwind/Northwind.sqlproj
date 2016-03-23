@@ -178,6 +178,7 @@
     <Folder Include="Tasks\Task10" />
     <Folder Include="Tasks\Task11" />
     <Folder Include="Tasks\Task12" />
+    <Folder Include="Tasks\Task13" />
   </ItemGroup>
   <ItemGroup>
     <BuildContributorArgument Include="OutDir=$(OutDir)" />
@@ -240,6 +241,9 @@
     <None Include="Tasks\Task10\Task_10.1.sql" />
     <None Include="Tasks\Task11\Task_11.1.sql" />
     <None Include="Tasks\Task12\Task_12.1.sql" />
+    <None Include="Tasks\Task13\Task_13.3.sql" />
+    <None Include="Tasks\Task13\Task_13.2.sql" />
+    <None Include="Tasks\Task13\Task_13.4.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Permissions.sql" />
@@ -528,6 +532,9 @@
     <Build Include="Schema Objects\Database Level Objects\Security\Schemas\Northwind.schema.sql">
       <SubType>Code</SubType>
     </Build>
+    <None Include="Tasks\Task13\Task_13.1.sql" />
+    <Build Include="Schema Objects\Schemas\Northwind\Programmability\Stored Procedures\GreatestOrders.sql" />
+    <Build Include="Schema Objects\Schemas\Northwind\Programmability\Stored Procedures\SubordinationInfo.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Debug.publish.xml" />
