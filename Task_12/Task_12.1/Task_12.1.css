@@ -1,0 +1,9 @@
+ul
+{
+	border-radius: 6px;
+    box-shadow: 8px 8px 0px 5px #800000;
+	background-color: #FFDEAD;
+	color: #800000;
+	width: 200px;
+	height: 200px;
+}
