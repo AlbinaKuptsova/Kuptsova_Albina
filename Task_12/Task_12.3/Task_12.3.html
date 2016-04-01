@@ -14,6 +14,11 @@ P {text-align:left}
 ul {color: black; text-align: left}
 li {list-style-type: square}
 .smalltable {color:black}
+.frame1 {width: 170px; height: 20px; padding:20px; outline: 1px solid #000; text-align:left}
+.frame2 {width: 170px; height: 20px; padding:20px; outline: 1px solid #000; text-align:left}
+.list {width: 200px; height: 40px; padding:20px; outline: 2px solid #000; font-size:20px}
+.frame3 {width: 25px; height: 25px; outline: 3px solid #000}
+.enter {width: 170px; height: 20px; background: #D3D3D3; padding: 10px; border-radius: 5px; border: 3px solid #000; text-align:left}
 </style>
 <body>
 	<table class="layout" cellspacing="0" width="100%" border="1px solid black">
@@ -79,8 +84,16 @@ li {list-style-type: square}
 				</td>
 				<td class="rightcol">
 					Логин:<br>
+					<div class="frame1">login</div><br>
 					Пароль:
-					
+					<div class="frame2">******</div><br>
+					<select class="list">
+						<option>Admin</option>
+						<option>Tester</option>
+						<option>User</option>
+					</select><br><br>
+					<div class="frame3"></div>Запомнить меня<br>
+					<div class="enter">Вход</div>
 				</td>
 			</tr>	
 			<tr> <td colspan="3" class="footer"> albinosets 2016 </td> </tr>
