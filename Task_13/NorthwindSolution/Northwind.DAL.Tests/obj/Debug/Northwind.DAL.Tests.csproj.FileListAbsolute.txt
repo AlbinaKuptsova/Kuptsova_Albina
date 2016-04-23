@@ -1,0 +1,114 @@
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\ApplicationInsights.config
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\csc.exe
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\vbc.exe
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.pdb
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.Web.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Optimization.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Mvc.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Security.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Owin.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\EntityFramework.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Razor.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.pdb
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.Web.pdb
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Optimization.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Mvc.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Security.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\EntityFramework.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Razor.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.csprojResolveAssemblyReference.cache
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.pdb
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.dll.config
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\ApplicationInsights.config
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\csc.exe
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\vbc.exe
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.dll.config
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.pdb
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.Web.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Optimization.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Mvc.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Owin.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\EntityFramework.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Razor.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.pdb
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.Web.pdb
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Optimization.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Mvc.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\EntityFramework.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.Razor.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.csprojResolveAssemblyReference.cache
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.pdb
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.dll.config
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.dll
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.Tests.pdb
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.dll
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL.Tests\bin\Debug\Northwind.DAL.pdb
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.csprojResolveAssemblyReference.cache
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.dll
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL.Tests\obj\Debug\Northwind.DAL.Tests.pdb

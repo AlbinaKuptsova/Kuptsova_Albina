@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 1</title>
+</head>
+<style>
+	.text {width:400 px; height: 30px}
+</style>
+<body>
+		<input class = "text" type="text" id="myTextBox">
+		<input type="button" onclick="button_click()" value="Обработать строку"/>
+		<script type="text/javascript">
+		function is_correct_char(ch) {
+				var str = "?!:;,.";
+				for (var i=0; i < str.length; i++)
+				{
+					if (str[i] == ch)
+						{
+							return false;
+						}		
+				}
+				return true;
+	}
+	    function need_to_copy(str, ch) 
+		{
+			if(ch ==" ")
+			{
+				return true;
+			}
+			var count = 0;
+			for (var i=0; i < str.length; i++)
+				{
+					if (str[i] == ch)
+						{
+							count++;
+							if (count > 1)
+							{
+								return false;
+							}
+						}		
+				}
+			return true;
+		}
+
+         function button_click() {
+            myTextBox = document.getElementById("myTextBox");
+			input_str = myTextBox.value;
+			input_str = input_str.toLowerCase();
+			var str_result = "";
+			for (var i = 0; i < input_str.length; i++)
+				{
+					if (is_correct_char(input_str[i]))
+						{
+							if (need_to_copy(input_str,input_str[i]))
+								{
+									str_result = str_result.concat(input_str[i]);
+								}
+						}								
+				}
+			alert(str_result);
+		}
+		
+	</script>
+</body>
+</html>

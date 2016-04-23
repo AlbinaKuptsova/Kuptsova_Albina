@@ -1,0 +1,23 @@
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\sql\debug\Northwind.dacpac
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\sql\debug\Northwind.dll
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\sql\debug\Northwind.pdb
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\obj\Debug\Northwind.dll
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\obj\Debug\Northwind.pdb
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\obj\Debug\Model.xml
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\obj\Debug\refactor.xml
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\obj\Debug\postdeploy.sql
+C:\Users\binnn\Desktop\Northwind\Northwind\Northwind\obj\Debug\predeploy.sql
+C:\projects\EPAM\Tasks\Task_11\Northwind\Northwind\Northwind\sql\debug\Northwind.dacpac
+C:\projects\EPAM\Tasks\Task_11\Northwind\Northwind\Northwind\sql\debug\Northwind.dll
+C:\projects\EPAM\Tasks\Task_11\Northwind\Northwind\Northwind\sql\debug\Northwind.pdb
+C:\projects\EPAM\Tasks\Task_11\Northwind\Northwind\Northwind\obj\Debug\Northwind.dll
+C:\projects\EPAM\Tasks\Task_11\Northwind\Northwind\Northwind\obj\Debug\Northwind.pdb
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\sql\debug\Northwind.dacpac
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\sql\debug\Northwind.dll
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\sql\debug\Northwind.pdb
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\obj\Debug\Model.xml
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\obj\Debug\refactor.xml
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\obj\Debug\postdeploy.sql
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\obj\Debug\predeploy.sql
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\obj\Debug\Northwind.dll
+C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\obj\Debug\Northwind.pdb

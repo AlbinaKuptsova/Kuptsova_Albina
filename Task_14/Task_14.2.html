@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Задание 2</title>
+</head>
+<style>
+	.text {width:400 px; height: 30px}
+</style>
+<body>
+		<input class = "text" type="text" id="myTextBox">
+		<input type="button" onclick="button_click()" value="Вычислить"/>
+		<script type="text/javascript">
+	
+
+         function button_click() {
+           
+		   	myTextBox = document.getElementById("myTextBox");
+			str = myTextBox.value;
+
+		   var parts = str.split(/(?=[\-\+\*\/])/);
+		   
+		   var result = 0;   
+		   
+		   for (var i = 0; i < parts.length;i++){
+			
+				var part = parts[i];
+				
+				var operation = part[0];
+				
+				var value = 0;
+				
+				switch (operation) {
+				
+					case "+": value = part.substr(1,part.length - 1);
+						result += parseFloat(value);
+						break;
+
+					case "-": value = part.substr(1,part.length - 1);
+						  result -= parseFloat(value);
+						  break;						  
+				
+					case "*": value = part.substr(1,part.length - 1);
+						  result *= parseFloat(value);
+						  break;
+
+					case "/": value = part.substr(1,part.length - 1);
+						  result /= parseFloat(value);
+						  break;
+				
+					default: value = part;
+							 result += parseFloat(value);
+				}
+		   }
+		   alert(result.toFixed(2));
+		}
+		
+	</script>
+</body>
+</html>

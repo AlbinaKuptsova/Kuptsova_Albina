@@ -1,0 +1,22 @@
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.pdb
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.csprojResolveAssemblyReference.cache
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.dll
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
+c:\users\binnn\onedrive\documents\visual studio 2015\Projects\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.dll.config
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.dll.config
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.pdb
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.csprojResolveAssemblyReference.cache
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.dll
+C:\projects\EPAM\Tasks\Task_11\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.dll
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.pdb
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.csprojResolveAssemblyReference.cache
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.dll
+F:\projects\albinosets\Task_11\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.pdb
+C:\hlam\EPAM\Задание 13\NorthwindSolution\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.dll
+C:\hlam\EPAM\Задание 13\NorthwindSolution\NorthwindSolution\Northwind.DAL\bin\Debug\Northwind.DAL.pdb
+C:\hlam\EPAM\Задание 13\NorthwindSolution\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.csprojResolveAssemblyReference.cache
+C:\hlam\EPAM\Задание 13\NorthwindSolution\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.dll
+C:\hlam\EPAM\Задание 13\NorthwindSolution\NorthwindSolution\Northwind.DAL\obj\Debug\Northwind.DAL.pdb

@@ -1,0 +1,170 @@
+﻿@model Northwind.DAL.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<p>
+    @Html.ActionLink("Back to List", "Index")<br/>
+    @Html.ActionLink("Take Order", "TakeOrder", new { id = Model.OrderID })<br/>
+    @Html.ActionLink("Make Complete", "MakeComplete", new { id = Model.OrderID })
+</p>
+<div>
+    <h4>Order #@Html.DisplayFor(model => model.OrderID)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrderStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequiredDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequiredDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShippedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShippedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipVia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipVia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Freight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Freight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipRegion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipRegion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipPostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipPostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShipCountry)
+        </dd>
+
+    </dl>
+    <hr/>
+    <table class="table">
+        <tr>
+            <th>
+                ProductName
+            </th>
+            <th>
+                UnitPrice
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Discount
+            </th>
+            <th>
+                ExtendedPrice
+            </th>
+        </tr>
+        @foreach (var item in Model.OrderDetails)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExtendedPrice)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

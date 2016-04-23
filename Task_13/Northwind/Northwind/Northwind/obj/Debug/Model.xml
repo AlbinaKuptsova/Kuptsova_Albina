@@ -1,0 +1,5274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.4" DspName="Microsoft.Data.Tools.Schema.Sql.SqlAzureDatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="120" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Northwind.dll" />
+			<Metadata Name="FileName" Value="C:\HLAM\EPAM\ЗАДАНИЕ 13\NORTHWINDSOLUTION\NORTHWIND\NORTHWIND\NORTHWIND\OBJ\DEBUG\NORTHWIND.DLL" />
+			<Metadata Name="AssemblyName" Value="Northwind" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\hlam\EPAM\Задание 13\NorthwindSolution\Northwind\Northwind\Northwind\obj\Debug\Northwind.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+		</Element>
+		<Element Type="SqlSchema" Name="[Northwind]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Alphabetical list of products]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Products.*, Categories.CategoryName
+FROM [Northwind].Categories INNER JOIN [Northwind].Products ON Categories.CategoryID = Products.CategoryID
+WHERE (((Products.Discontinued)=0))]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[ProductID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[ProductName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[SupplierID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[SupplierID]" Disambiguator="17" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[CategoryID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[QuantityPerUnit]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[QuantityPerUnit]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[UnitPrice]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[UnitPrice]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[UnitsInStock]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[UnitsInStock]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[UnitsOnOrder]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[UnitsOnOrder]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[ReorderLevel]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ReorderLevel]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[Discontinued]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[Discontinued]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Alphabetical list of products].[CategoryName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Categories]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[Discontinued]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="247" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Alphabetical list of products] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Categories]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Categories].[CategoryID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Categories].[Description]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Categories].[Picture]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[image]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Categories].[CategoryName]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Categories]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Category Sales for 1997]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT "Product Sales for 1997".CategoryName, Sum("Product Sales for 1997".ProductSales) AS CategorySales
+FROM [Northwind]."Product Sales for 1997"
+GROUP BY "Product Sales for 1997".CategoryName]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Category Sales for 1997].[CategoryName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Product Sales for 1997].[CategoryName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Category Sales for 1997].[CategorySales]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Product Sales for 1997]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Product Sales for 1997].[CategoryName]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Product Sales for 1997].[ProductSales]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="250" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Category Sales for 1997] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlCheckConstraint" Name="[Northwind].[CK_Birthdate]">
+			<Property Name="CheckExpressionScript">
+				<Value><![CDATA[[BirthDate]<getdate()]]></Value>
+			</Property>
+			<Relationship Name="CheckExpressionDependencies">
+				<Entry>
+					<References Name="[Northwind].[Employees].[BirthDate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlCheckConstraint" Name="[Northwind].[CK_Discount]">
+			<Property Name="CheckExpressionScript">
+				<Value><![CDATA[[Discount]>=(0) AND [Discount]<=(1)]]></Value>
+			</Property>
+			<Relationship Name="CheckExpressionDependencies">
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlCheckConstraint" Name="[Northwind].[CK_Products_UnitPrice]">
+			<Property Name="CheckExpressionScript">
+				<Value><![CDATA[[UnitPrice]>=(0)]]></Value>
+			</Property>
+			<Relationship Name="CheckExpressionDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitPrice]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlCheckConstraint" Name="[Northwind].[CK_Quantity]">
+			<Property Name="CheckExpressionScript">
+				<Value><![CDATA[[Quantity]>(0)]]></Value>
+			</Property>
+			<Relationship Name="CheckExpressionDependencies">
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlCheckConstraint" Name="[Northwind].[CK_ReorderLevel]">
+			<Property Name="CheckExpressionScript">
+				<Value><![CDATA[[ReorderLevel]>=(0)]]></Value>
+			</Property>
+			<Relationship Name="CheckExpressionDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products].[ReorderLevel]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlCheckConstraint" Name="[Northwind].[CK_UnitPrice]">
+			<Property Name="CheckExpressionScript">
+				<Value><![CDATA[[UnitPrice]>=(0)]]></Value>
+			</Property>
+			<Relationship Name="CheckExpressionDependencies">
+				<Entry>
+					<References Name="[Northwind].[Order Details].[UnitPrice]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlCheckConstraint" Name="[Northwind].[CK_UnitsInStock]">
+			<Property Name="CheckExpressionScript">
+				<Value><![CDATA[[UnitsInStock]>=(0)]]></Value>
+			</Property>
+			<Relationship Name="CheckExpressionDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitsInStock]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlCheckConstraint" Name="[Northwind].[CK_UnitsOnOrder]">
+			<Property Name="CheckExpressionScript">
+				<Value><![CDATA[[UnitsOnOrder]>=(0)]]></Value>
+			</Property>
+			<Relationship Name="CheckExpressionDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitsOnOrder]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Current Product List]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Product_List.ProductID, Product_List.ProductName
+FROM [Northwind].Products AS Product_List
+WHERE (((Product_List.Discontinued)=0))]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Current Product List].[ProductID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Current Product List].[ProductName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[Discontinued]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="190" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Current Product List] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Customer and Suppliers by City]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT City, CompanyName, ContactName, 'Customers' AS Relationship 
+FROM [Northwind].Customers
+UNION SELECT City, CompanyName, ContactName, 'Suppliers'
+FROM [Northwind].Suppliers
+--ORDER BY City, CompanyName]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Customer and Suppliers by City].[City]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Customer and Suppliers by City].[CompanyName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Customer and Suppliers by City].[ContactName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[ContactName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Customer and Suppliers by City].[Relationship]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[ContactName]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Suppliers]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Suppliers].[City]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Suppliers].[CompanyName]" Disambiguator="5" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Suppliers].[ContactName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="272" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Customer and Suppliers by City] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[CustomerCustomerDemo]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[CustomerCustomerDemo].[CustomerID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="5" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[CustomerCustomerDemo].[CustomerTypeID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[CustomerDemographics]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[CustomerDemographics].[CustomerTypeID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[CustomerDemographics].[CustomerDesc]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="24" />
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Customers]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[CustomerID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="5" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="40" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[ContactName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[ContactTitle]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[Address]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[City]" Disambiguator="8">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[Region]" Disambiguator="9">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[PostalCode]" Disambiguator="10">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[Country]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[Phone]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="24" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Customers].[Fax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="24" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="25" />
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Customers].[City]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Customers].[CompanyName]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Customers].[PostalCode]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Customers].[PostalCode]" Disambiguator="10" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Customers].[Region]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Customers].[Region]" Disambiguator="9" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[Northwind].[CustOrderHist]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+SELECT ProductName, Total=SUM(Quantity)
+FROM [Northwind].Products P, [Northwind].[Order Details] OD, [Northwind].Orders O, [Northwind].Customers C
+WHERE C.CustomerID = @CustomerID
+AND C.CustomerID = O.CustomerID AND O.OrderID = OD.OrderID AND OD.ProductID = P.ProductID
+GROUP BY ProductName]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[CustOrderHist].[@CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[CustOrderHist].[@CustomerID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="5" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="365" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [Northwind].[CustOrderHist] @CustomerID nchar(5)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[Northwind].[CustOrdersDetail]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+SELECT ProductName,
+    UnitPrice=ROUND(Od.UnitPrice, 2),
+    Quantity,
+    Discount=CONVERT(int, Discount * 100), 
+    ExtendedPrice=ROUND(CONVERT(money, Quantity * (1 - Discount) * Od.UnitPrice), 2)
+FROM [Northwind].Products P, [Northwind].[Order Details] Od
+WHERE Od.ProductID = P.ProductID and Od.OrderID = @OrderID]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[money]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[CustOrdersDetail].[@OrderID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[CustOrdersDetail].[@OrderID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="391" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [Northwind].[CustOrdersDetail] @OrderID int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[Northwind].[CustOrdersOrders]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+SELECT OrderID, 
+	OrderDate,
+	RequiredDate,
+	ShippedDate
+FROM [Northwind].Orders
+WHERE CustomerID = @CustomerID
+ORDER BY OrderID]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[RequiredDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[CustOrdersOrders].[@CustomerID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[CustOrdersOrders].[@CustomerID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="5" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="208" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [Northwind].[CustOrdersOrders] @CustomerID nchar(5)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Order_Details_Discount]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Order_Details_Quantity]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((1))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Order_Details_UnitPrice]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Order Details].[UnitPrice]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Orders_Freight]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Orders].[Freight]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Products_Discontinued]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Products].[Discontinued]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Products_ReorderLevel]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Products].[ReorderLevel]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Products_UnitPrice]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitPrice]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Products_UnitsInStock]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitsInStock]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[Northwind].[DF_Products_UnitsOnOrder]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitsOnOrder]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[Northwind].[Employee Sales by Country]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+SELECT Employees.Country, Employees.LastName, Employees.FirstName, Orders.ShippedDate, Orders.OrderID, "Order Subtotals".Subtotal AS SaleAmount
+FROM [Northwind].Employees INNER JOIN 
+	([Northwind].Orders INNER JOIN [Northwind]."Order Subtotals" ON Orders.OrderID = "Order Subtotals".OrderID) 
+	ON Employees.EmployeeID = Orders.EmployeeID
+WHERE Orders.ShippedDate Between @Beginning_Date And @Ending_Date]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employees].[EmployeeID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[EmployeeID]" Disambiguator="4" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employees].[Country]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employees].[LastName]" Disambiguator="12" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employees].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[Subtotal]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employee Sales by Country].[@Beginning_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employee Sales by Country].[@Ending_Date]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[Employee Sales by Country].[@Beginning_Date]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[Employee Sales by Country].[@Ending_Date]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="518" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create procedure [Northwind].[Employee Sales by Country] &#xD;&#xA;@Beginning_Date DateTime, @Ending_Date DateTime AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Employees]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[EmployeeID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[LastName]" Disambiguator="12">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[FirstName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[Title]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[TitleOfCourtesy]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[BirthDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[HireDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[Address]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[City]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[Region]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[PostalCode]" Disambiguator="13">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[Country]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[HomePhone]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="24" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[Extension]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="4" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[Photo]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[image]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[Notes]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[ReportsTo]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Employees].[PhotoPath]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="26" />
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Employees].[LastName]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Employees].[LastName]" Disambiguator="12" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Employees].[PostalCode]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Employees].[PostalCode]" Disambiguator="13" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[EmployeeTerritories]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[EmployeeTerritories].[EmployeeID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[EmployeeTerritories].[TerritoryID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="27" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_CustomerCustomerDemo]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[CustomerCustomerDemo].[CustomerTypeID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[CustomerCustomerDemo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[CustomerDemographics].[CustomerTypeID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[CustomerDemographics]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_CustomerCustomerDemo_Customers]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[CustomerCustomerDemo].[CustomerID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[CustomerCustomerDemo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Customers].[CustomerID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Employees_Employees]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Employees].[ReportsTo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Employees].[EmployeeID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_EmployeeTerritories_Employees]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[EmployeeTerritories].[EmployeeID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[EmployeeTerritories]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Employees].[EmployeeID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_EmployeeTerritories_Territories]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[EmployeeTerritories].[TerritoryID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[EmployeeTerritories]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Territories].[TerritoryID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Territories]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Order_Details_Orders]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Order_Details_Products]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Orders_Customers]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Customers].[CustomerID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Orders_Employees]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Orders].[EmployeeID]" Disambiguator="4" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Employees].[EmployeeID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Orders_Shippers]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipVia]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Shippers].[ShipperID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Shippers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Products_Categories]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Categories]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Products_Suppliers]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Products].[SupplierID]" Disambiguator="17" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Suppliers].[SupplierID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Suppliers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[Northwind].[FK_Territories_Region]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[Northwind].[Territories].[RegionID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Territories]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[Northwind].[Region].[RegionID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[Northwind].[Region]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Invoices]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Orders.ShipName, Orders.ShipAddress, Orders.ShipCity, Orders.ShipRegion, Orders.ShipPostalCode, 
+	Orders.ShipCountry, Orders.CustomerID, Customers.CompanyName AS CustomerName, Customers.Address, Customers.City, 
+	Customers.Region, Customers.PostalCode, Customers.Country, 
+	(FirstName + ' ' + LastName) AS Salesperson, 
+	Orders.OrderID, Orders.OrderDate, Orders.RequiredDate, Orders.ShippedDate, Shippers.CompanyName As ShipperName, 
+	"Order Details".ProductID, Products.ProductName, "Order Details".UnitPrice, "Order Details".Quantity, 
+	"Order Details".Discount, 
+	(CONVERT(money,("Order Details".UnitPrice*Quantity*(1-Discount)/100))*100) AS ExtendedPrice, Orders.Freight
+FROM 	[Northwind].Shippers INNER JOIN 
+		([Northwind].Products INNER JOIN 
+			(
+				([Northwind].Employees INNER JOIN 
+					([Northwind].Customers INNER JOIN [Northwind].Orders ON Customers.CustomerID = Orders.CustomerID) 
+				ON Employees.EmployeeID = Orders.EmployeeID) 
+			INNER JOIN [Northwind]."Order Details" ON Orders.OrderID = "Order Details".OrderID) 
+		ON Products.ProductID = "Order Details".ProductID) 
+	ON Shippers.ShipperID = Orders.ShipVia]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ShipName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ShipAddress]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipAddress]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ShipCity]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipCity]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ShipRegion]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipRegion]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ShipPostalCode]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipPostalCode]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ShipCountry]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipCountry]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[CustomerID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[CustomerName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[Address]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[Address]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[City]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[Region]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[Region]" Disambiguator="9" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[PostalCode]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[PostalCode]" Disambiguator="10" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[Country]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[Country]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[Salesperson]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[OrderID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[OrderDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[RequiredDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[RequiredDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ShippedDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShippedDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ShipperName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Shippers].[CompanyName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ProductID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ProductName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[UnitPrice]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[UnitPrice]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[Quantity]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[Quantity]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[Discount]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[Discount]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[ExtendedPrice]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Invoices].[Freight]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[Freight]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Shippers]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employees].[EmployeeID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[EmployeeID]" Disambiguator="4" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Shippers].[ShipperID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipVia]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipName]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipAddress]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipCity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipRegion]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipPostalCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipCountry]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[Address]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[Region]" Disambiguator="9" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[PostalCode]" Disambiguator="10" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[Country]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employees].[FirstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Employees].[LastName]" Disambiguator="12" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[RequiredDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Shippers].[CompanyName]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[money]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[Freight]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1191" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Invoices] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Order Details]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Order Details].[UnitPrice]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Order Details].[Quantity]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[smallint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Order Details].[Discount]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[real]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="28" />
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Order Details].[OrderID]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Order Details].[OrdersOrder_Details]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Order Details].[ProductID]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Order Details].[ProductsOrder_Details]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Order Details Extended]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT "Order Details".OrderID, "Order Details".ProductID, Products.ProductName, 
+	"Order Details".UnitPrice, "Order Details".Quantity, "Order Details".Discount, 
+	(CONVERT(money,("Order Details".UnitPrice*Quantity*(1-Discount)/100))*100) AS ExtendedPrice
+FROM [Northwind].Products INNER JOIN [Northwind]."Order Details" ON Products.ProductID = "Order Details".ProductID
+--ORDER BY "Order Details".OrderID]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Details Extended].[OrderID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Details Extended].[ProductID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Details Extended].[ProductName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Details Extended].[UnitPrice]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[UnitPrice]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Details Extended].[Quantity]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[Quantity]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Details Extended].[Discount]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[Discount]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Details Extended].[ExtendedPrice]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[money]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="462" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Order Details Extended] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Order Subtotals]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT "Order Details".OrderID, Sum(CONVERT(money,("Order Details".UnitPrice*Quantity*(1-Discount)/100))*100) AS Subtotal
+FROM [Northwind]."Order Details"
+GROUP BY "Order Details".OrderID]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Subtotals].[OrderID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Order Subtotals].[Subtotal]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[money]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="235" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Order Subtotals] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Orders]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[OrderID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="5" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[EmployeeID]" Disambiguator="4">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[OrderDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[RequiredDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[ShippedDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[ShipVia]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[Freight]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[ShipName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="40" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[ShipAddress]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[ShipCity]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[ShipRegion]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[ShipPostalCode]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Orders].[ShipCountry]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="29" />
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Orders].[CustomerID]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Orders].[CustomersOrders]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Orders].[EmployeeID]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[EmployeeID]" Disambiguator="4" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Orders].[EmployeesOrders]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[EmployeeID]" Disambiguator="4" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Orders].[OrderDate]" Disambiguator="21">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Orders].[ShippedDate]" Disambiguator="20">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShippedDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Orders].[ShippersOrders]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipVia]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Orders].[ShipPostalCode]" Disambiguator="19">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipPostalCode]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Orders Qry]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Orders.OrderID, Orders.CustomerID, Orders.EmployeeID, Orders.OrderDate, Orders.RequiredDate, 
+	Orders.ShippedDate, Orders.ShipVia, Orders.Freight, Orders.ShipName, Orders.ShipAddress, Orders.ShipCity, 
+	Orders.ShipRegion, Orders.ShipPostalCode, Orders.ShipCountry, 
+	Customers.CompanyName, Customers.Address, Customers.City, Customers.Region, Customers.PostalCode, Customers.Country
+FROM [Northwind].Customers INNER JOIN [Northwind].Orders ON Customers.CustomerID = Orders.CustomerID]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[OrderID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[CustomerID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[EmployeeID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[EmployeeID]" Disambiguator="4" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[OrderDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[RequiredDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[RequiredDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[ShippedDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShippedDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[ShipVia]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipVia]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[Freight]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[Freight]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[ShipName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[ShipAddress]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipAddress]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[ShipCity]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipCity]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[ShipRegion]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipRegion]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[ShipPostalCode]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipPostalCode]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[ShipCountry]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShipCountry]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[CompanyName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[Address]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[Address]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[City]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[Region]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[Region]" Disambiguator="9" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[PostalCode]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[PostalCode]" Disambiguator="10" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Orders Qry].[Country]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[Country]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[EmployeeID]" Disambiguator="4" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[RequiredDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipVia]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[Freight]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipName]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipAddress]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipCity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipRegion]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipPostalCode]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShipCountry]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[Address]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[Region]" Disambiguator="9" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[PostalCode]" Disambiguator="10" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[Country]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="535" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Orders Qry] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Categories]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Categories].[CategoryID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Categories]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="22" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_CustomerCustomerDemo]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[CustomerCustomerDemo].[CustomerID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[CustomerCustomerDemo].[CustomerTypeID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[CustomerCustomerDemo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="23" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_CustomerDemographics]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[CustomerDemographics].[CustomerTypeID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[CustomerDemographics]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="24" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Customers]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Customers].[CustomerID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="25" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Employees]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Employees].[EmployeeID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Employees]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="26" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_EmployeeTerritories]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[EmployeeTerritories].[EmployeeID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[EmployeeTerritories].[TerritoryID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[EmployeeTerritories]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="27" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Order_Details]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="28" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Orders]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="29" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Products]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="30" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Region]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Region].[RegionID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Region]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="31" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Shippers]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Shippers].[ShipperID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Shippers]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="32" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Suppliers]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Suppliers].[SupplierID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Suppliers]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="33" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[Northwind].[PK_Territories]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Territories].[TerritoryID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[Northwind].[Territories]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="34" />
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Product Sales for 1997]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Categories.CategoryName, Products.ProductName, 
+Sum(CONVERT(money,("Order Details".UnitPrice*Quantity*(1-Discount)/100))*100) AS ProductSales
+FROM ([Northwind].Categories INNER JOIN [Northwind].Products ON Categories.CategoryID = Products.CategoryID) 
+	INNER JOIN ([Northwind].Orders 
+		INNER JOIN [Northwind]."Order Details" ON Orders.OrderID = "Order Details".OrderID) 
+	ON Products.ProductID = "Order Details".ProductID
+WHERE (((Orders.ShippedDate) Between '19970101' And '19971231'))
+GROUP BY Categories.CategoryName, Products.ProductName]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Product Sales for 1997].[CategoryName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Product Sales for 1997].[ProductName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Product Sales for 1997].[ProductSales]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Categories]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[money]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="609" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Product Sales for 1997] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Products]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[ProductID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[ProductName]" Disambiguator="16">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="40" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[SupplierID]" Disambiguator="17">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[CategoryID]" Disambiguator="18">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[QuantityPerUnit]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[UnitPrice]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[UnitsInStock]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[smallint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[UnitsOnOrder]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[smallint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[ReorderLevel]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[smallint]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Products].[Discontinued]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="30" />
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Products].[CategoriesProducts]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Products].[CategoryID]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Products].[ProductName]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Products].[SupplierID]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Products].[SupplierID]" Disambiguator="17" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Products].[SuppliersProducts]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Products].[SupplierID]" Disambiguator="17" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Products Above Average Price]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Products.ProductName, Products.UnitPrice
+FROM [Northwind].Products
+WHERE Products.UnitPrice>(SELECT AVG(UnitPrice) From [Northwind].Products)
+--ORDER BY Products.UnitPrice DESC]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Products Above Average Price].[ProductName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Products Above Average Price].[UnitPrice]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[UnitPrice]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitPrice]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="245" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Products Above Average Price] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Products by Category]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Categories.CategoryName, Products.ProductName, Products.QuantityPerUnit, Products.UnitsInStock, Products.Discontinued
+FROM [Northwind].Categories INNER JOIN [Northwind].Products ON Categories.CategoryID = Products.CategoryID
+WHERE Products.Discontinued <> 1
+--ORDER BY Categories.CategoryName, Products.ProductName]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Products by Category].[CategoryName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Products by Category].[ProductName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Products by Category].[QuantityPerUnit]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[QuantityPerUnit]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Products by Category].[UnitsInStock]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[UnitsInStock]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Products by Category].[Discontinued]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[Discontinued]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Categories]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[QuantityPerUnit]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitsInStock]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[Discontinued]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="375" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Products by Category] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Quarterly Orders]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT DISTINCT Customers.CustomerID, Customers.CompanyName, Customers.City, Customers.Country
+FROM [Northwind].Customers RIGHT JOIN [Northwind].Orders ON Customers.CustomerID = Orders.CustomerID
+WHERE Orders.OrderDate BETWEEN '19970101' And '19971231']]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Quarterly Orders].[CustomerID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[CustomerID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Quarterly Orders].[CompanyName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Quarterly Orders].[City]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Quarterly Orders].[Country]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[Country]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[City]" Disambiguator="8" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[Country]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderDate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="301" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Quarterly Orders] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Region]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Region].[RegionID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Region].[RegionDescription]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="31" />
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Sales by Category]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Categories.CategoryID, Categories.CategoryName, Products.ProductName, 
+	Sum("Order Details Extended".ExtendedPrice) AS ProductSales
+FROM 	[Northwind].Categories INNER JOIN 
+		([Northwind].Products INNER JOIN 
+			([Northwind].Orders INNER JOIN [Northwind]."Order Details Extended" ON Orders.OrderID = "Order Details Extended".OrderID) 
+		ON Products.ProductID = "Order Details Extended".ProductID) 
+	ON Categories.CategoryID = Products.CategoryID
+WHERE Orders.OrderDate BETWEEN '19970101' And '19971231'
+GROUP BY Categories.CategoryID, Categories.CategoryName, Products.ProductName
+--ORDER BY Products.ProductName]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Sales by Category].[CategoryID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Categories].[CategoryID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Sales by Category].[CategoryName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Sales by Category].[ProductName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Sales by Category].[ProductSales]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Categories]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details Extended]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details Extended].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details Extended].[ProductID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details Extended].[ExtendedPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderDate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="676" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Sales by Category] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[Northwind].[Sales by Year]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+SELECT Orders.ShippedDate, Orders.OrderID, "Order Subtotals".Subtotal, DATENAME(yy,ShippedDate) AS Year
+FROM [Northwind].Orders INNER JOIN [Northwind]."Order Subtotals" ON Orders.OrderID = "Order Subtotals".OrderID
+WHERE Orders.ShippedDate Between @Beginning_Date And @Ending_Date]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[Subtotal]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Sales by Year].[@Beginning_Date]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Sales by Year].[@Ending_Date]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[Sales by Year].[@Beginning_Date]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[Sales by Year].[@Ending_Date]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="382" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create procedure [Northwind].[Sales by Year] &#xD;&#xA;&#x9;@Beginning_Date DateTime, @Ending_Date DateTime AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Sales Totals by Amount]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT "Order Subtotals".Subtotal AS SaleAmount, Orders.OrderID, Customers.CompanyName, Orders.ShippedDate
+FROM 	[Northwind].Customers INNER JOIN 
+		([Northwind].Orders INNER JOIN [Northwind]."Order Subtotals" ON Orders.OrderID = "Order Subtotals".OrderID) 
+	ON Customers.CustomerID = Orders.CustomerID
+WHERE ("Order Subtotals".Subtotal >2500) AND (Orders.ShippedDate BETWEEN '19970101' And '19971231')]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Sales Totals by Amount].[SaleAmount]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Subtotals].[Subtotal]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Sales Totals by Amount].[OrderID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Sales Totals by Amount].[CompanyName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Sales Totals by Amount].[ShippedDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShippedDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Customers]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[CustomerID]" Disambiguator="3" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[Subtotal]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Customers].[CompanyName]" Disambiguator="7" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="459" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Sales Totals by Amount] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[Northwind].[SalesByCategory]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+IF @OrdYear != '1996' AND @OrdYear != '1997' AND @OrdYear != '1998' 
+BEGIN
+	SELECT @OrdYear = '1998'
+END
+
+SELECT ProductName,
+	TotalPurchase=ROUND(SUM(CONVERT(decimal(14,2), OD.Quantity * (1-OD.Discount) * OD.UnitPrice)), 0)
+FROM [Northwind].[Order Details] OD, [Northwind].Orders O, [Northwind].Products P, [Northwind].Categories C
+WHERE OD.OrderID = O.OrderID 
+	AND OD.ProductID = P.ProductID 
+	AND P.CategoryID = C.CategoryID
+	AND C.CategoryName = @CategoryName
+	AND SUBSTRING(CONVERT(nvarchar(22), O.OrderDate, 111), 1, 4) = @OrdYear
+GROUP BY ProductName
+ORDER BY ProductName]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[Northwind].[SalesByCategory].[@OrdYear]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[decimal]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[Discount]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[OrderID]" Disambiguator="14" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Details].[ProductID]" Disambiguator="15" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[CategoryID]" Disambiguator="18" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Categories].[CategoryName]" Disambiguator="11" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[SalesByCategory].[@CategoryName]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderDate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[SalesByCategory].[@CategoryName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[Northwind].[SalesByCategory].[@OrdYear]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA['1998']]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="4" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="708" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [Northwind].[SalesByCategory]&#xD;&#xA;    @CategoryName nvarchar(15), @OrdYear nvarchar(4) = '1998'&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Shippers]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Shippers].[ShipperID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Shippers].[CompanyName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="40" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Shippers].[Phone]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="24" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="32" />
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Summary of Sales by Quarter]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Orders.ShippedDate, Orders.OrderID, "Order Subtotals".Subtotal
+FROM [Northwind].Orders INNER JOIN [Northwind]."Order Subtotals" ON Orders.OrderID = "Order Subtotals".OrderID
+WHERE Orders.ShippedDate IS NOT NULL
+--ORDER BY Orders.ShippedDate]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Summary of Sales by Quarter].[ShippedDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShippedDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Summary of Sales by Quarter].[OrderID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Summary of Sales by Quarter].[Subtotal]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Subtotals].[Subtotal]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[Subtotal]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="308" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Summary of Sales by Quarter] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlView" Name="[Northwind].[Summary of Sales by Year]">
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT Orders.ShippedDate, Orders.OrderID, "Order Subtotals".Subtotal
+FROM [Northwind].Orders INNER JOIN [Northwind]."Order Subtotals" ON Orders.OrderID = "Order Subtotals".OrderID
+WHERE Orders.ShippedDate IS NOT NULL
+--ORDER BY Orders.ShippedDate]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Summary of Sales by Year].[ShippedDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[ShippedDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Summary of Sales by Year].[OrderID]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Orders].[OrderID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[Northwind].[Summary of Sales by Year].[Subtotal]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[Northwind].[Order Subtotals].[Subtotal]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References Name="[Northwind].[Orders]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Orders].[ShippedDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Order Subtotals].[Subtotal]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="305" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create view [Northwind].[Summary of Sales by Year] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Suppliers]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[SupplierID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[CompanyName]" Disambiguator="5">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="40" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[ContactName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[ContactTitle]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[Address]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[City]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[Region]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[PostalCode]" Disambiguator="6">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[Country]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="15" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[Phone]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="24" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[Fax]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="24" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Suppliers].[HomePage]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[ntext]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="33" />
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Suppliers].[CompanyName]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Suppliers].[CompanyName]" Disambiguator="5" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Suppliers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlIndex" Name="[Northwind].[Suppliers].[PostalCode]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[Northwind].[Suppliers].[PostalCode]" Disambiguator="6" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[Northwind].[Suppliers]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[Northwind].[Ten Most Expensive Products]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+SET ROWCOUNT 10
+SELECT Products.ProductName AS TenMostExpensiveProducts, Products.UnitPrice
+FROM [Northwind].Products
+ORDER BY Products.UnitPrice DESC]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[Northwind].[Products]" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[ProductName]" Disambiguator="16" />
+				</Entry>
+				<Entry>
+					<References Name="[Northwind].[Products].[UnitPrice]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="216" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create procedure [Northwind].[Ten Most Expensive Products] AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[Northwind].[Territories]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Territories].[TerritoryID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Territories].[TerritoryDescription]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[Northwind].[Territories].[RegionID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[Northwind]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="34" />
+		</Element>
+	</Model>
+</DataSchemaModel>
