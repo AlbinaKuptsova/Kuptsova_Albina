@@ -1,0 +1,34 @@
+﻿** Выделение
+     Таблицы, которые будут перестроены
+       Нет
+     Кластеризованные индексы, которые будут удалены
+       Нет
+     Кластеризованные индексы, которые будут созданы
+       Нет
+     Возможные проблемы, связанные с данными
+       Нет
+
+** Действия пользователя
+     Создать
+       [dbo].[__MigrationHistory] (Таблица)
+       [dbo].[AspNetRoles] (Таблица)
+       [dbo].[AspNetRoles].[RoleNameIndex] (Индекс)
+       [dbo].[AspNetUserClaims] (Таблица)
+       [dbo].[AspNetUserClaims].[IX_UserId] (Индекс)
+       [dbo].[AspNetUserLogins] (Таблица)
+       [dbo].[AspNetUserLogins].[IX_UserId] (Индекс)
+       [dbo].[AspNetUserRoles] (Таблица)
+       [dbo].[AspNetUserRoles].[IX_UserId] (Индекс)
+       [dbo].[AspNetUserRoles].[IX_RoleId] (Индекс)
+       [dbo].[AspNetUsers] (Таблица)
+       [dbo].[AspNetUsers].[UserNameIndex] (Индекс)
+       [dbo].[Likes] (Таблица)
+       [dbo].[Photos] (Таблица)
+       [dbo].[FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId] (Внешний ключ)
+       [dbo].[FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId] (Внешний ключ)
+       [dbo].[FK_dbo.AspNetUserRoles_dbo.AspNetRoles_RoleId] (Внешний ключ)
+       [dbo].[FK_dbo.AspNetUserRoles_dbo.AspNetUsers_UserId] (Внешний ключ)
+       [dbo].[FK_Likes_Photos] (Внешний ключ)
+       [dbo].[vw_Photos] (Представление)
+
+** Корректирующие действия

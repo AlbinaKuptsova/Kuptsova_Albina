@@ -1,0 +1,135 @@
+﻿@model WebApp.Models.FilesViewModel
+@using FileInfo = WebApp.Helpers.ImageInfo
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- blueimp File Upload & Gallery styles -->
+@Styles.Render("~/Content/jQuery-File-Upload")
+
+<!--
+<div class="jumbotron">
+    <h1>Photo Gallery</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p>
+        @Html.ActionLink("My Photos", "Index", "Album", new object { }, new { @class = "btn btn-primary btn-lg" })
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a>
+        </p>
+    </div>
+</div>
+-->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-carousel" data-filter=":even">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="like"></a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <div class="info">
+        <p>Author: <span class="author"></span></p>
+        <p>Likes: <span class="likes"></span></p>
+    </div>
+</div>
+<br />
+<div id="links">
+    @if (@Model.Files != null && @Model.Files.Length != 0)
+    {
+        foreach (FileInfo file in @Model.Files)
+        {
+            <a href="@file.url" title="@file.name" data-id="@file.id" data-likes="@file.likes" data-author="@file.author">
+                <img src="@file.thumbnailUrl" alt="@file.name">
+            </a>
+        }
+    }
+    else
+    {
+        <p>No photos</p>
+    }
+</div>
+<div id="dialog" title="Success">
+    <p>You liked this photo!</p>
+</div>
+<div id="error-dialog" title="Failed">
+    <p>Error! Try to enter Login/Password</p>
+</div>
+<script>
+    document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {
+                index: link,
+                event: event,
+                carousel: true,
+                onslide: function (index, slide) {
+                    var authorText = this.list[index].getAttribute('data-author');
+                    var authorNode = this.container.find('.author');
+                    authorNode.empty();
+                    if (authorText) {
+                        authorNode[0].appendChild(document.createTextNode(authorText));
+                    }
+
+                    var likeText = this.list[index].getAttribute('data-likes');
+                    var likeNode = this.container.find('.likes');
+                    likeNode.empty();
+                    if (likeText) {
+                        likeNode[0].appendChild(document.createTextNode(likeText));
+                    }
+                }
+            },
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+
+    $(function () {
+        $("#dialog").dialog({
+            autoOpen: false,
+            resizable: false,
+            height: 240,
+            modal: true,
+            buttons: {
+                "OK": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+
+        $("#error-dialog").dialog({
+            autoOpen: false,
+            resizable: false,
+            height: 240,
+            modal: true,
+            buttons: {
+                "OK": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+</script>
+@Scripts.Render("~/bundles/Blueimp-Gallerry2")

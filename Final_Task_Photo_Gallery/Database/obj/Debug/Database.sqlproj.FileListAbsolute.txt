@@ -1,0 +1,5 @@
+C:\projects\PhotoGallery\Database\bin\Debug\Database.dacpac
+C:\projects\PhotoGallery\Database\bin\Debug\Database.dll
+C:\projects\PhotoGallery\Database\bin\Debug\Database.pdb
+C:\projects\PhotoGallery\Database\obj\Debug\Database.dll
+C:\projects\PhotoGallery\Database\obj\Debug\Database.pdb
